@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LumiGlam | Beauty Salon Espoo – Lashes, Nails &amp; Pedicure</title>
+<meta name="description" content="LumiGlam beauty salon in Espoo offers eyelash extensions, manicure, pedicure and hand &amp; foot care. Book your appointment online.">
+<meta property="og:title" content="LumiGlam | Beauty Salon Espoo">
+<meta property="og:description" content="Eyelash extensions, manicure, pedicure and hand &amp; foot care in Espoo. Book online.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F4EFE7">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BeautySalon","name":"LumiGlam","telephone":"+358417262817","openingHours":"Mo-Su 09:00-20:00","address":{"@type":"PostalAddress","streetAddress":"Rälssitilankuja 4 O 7","postalCode":"02200","addressLocality":"Espoo","addressCountry":"FI"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4EFE7;--beige:#E8DED0;--ink:#151515;--cream:#FFFDF9;--mute:#5E574D;--serif:"Fraunces",Georgia,serif;--sans:"Jost",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font:400 1rem/1.65 var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--cream);padding:.6rem 1rem;border-radius:99px;z-index:100}
+.skip:focus{left:8px}
+.wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+section{padding:4.5rem 0}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.02;letter-spacing:-.02em}
+h2{font-size:clamp(2.2rem,6vw,3.8rem);margin-bottom:1.2rem}
+h3{font-size:1.6rem;font-weight:400;letter-spacing:-.01em}
+p{color:var(--mute);max-width:52ch}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.8rem 1.8rem;border-radius:99px;font:500 .82rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--ink);background:var(--ink);color:var(--cream);transition:background .25s,color .25s,transform .25s;cursor:pointer}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--cream)}
+.btn.light{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+.btn.light:hover{background:transparent;color:var(--cream)}
+.btn.sm{min-height:42px;padding:.6rem 1.3rem;font-size:.75rem}
+
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s}
+header.stuck{background:rgba(255,253,249,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(21,21,21,.08)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:400 1.5rem var(--serif);text-decoration:none;letter-spacing:-.02em}
+nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--cream);padding:1rem 1.25rem 1.5rem;flex-direction:column;gap:.2rem}
+nav.open{display:flex}
+nav a{padding:.7rem 0;text-decoration:none;font-size:1.05rem;border-bottom:1px solid var(--beige)}
+nav a.btn{margin-top:1rem;border:1.5px solid var(--ink);color:var(--cream)}
+.menu{width:48px;height:48px;border:0;background:none;cursor:pointer;display:grid;place-content:center;gap:6px}
+.menu i{display:block;width:24px;height:1.5px;background:var(--ink);transition:transform .25s}
+.menu[aria-expanded=true] i:first-child{transform:translateY(3.75px) rotate(45deg)}
+.menu[aria-expanded=true] i:last-child{transform:translateY(-3.75px) rotate(-45deg)}
+
+/* photos: upload files to the images/ folder. If a file is missing, the beige placeholder shows */
+.ph{position:relative;background:linear-gradient(150deg,#EFE6DA,#D9CBB8);overflow:hidden;display:grid;place-items:end start;padding:1rem;font-size:.8rem;color:#7a6f60}
+.ph::after{content:attr(data-label)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* hero */
+.hero{padding:6.5rem 0 3.5rem}
+.hero .wrap{display:grid;gap:2rem}
+.mark{font-size:clamp(4.4rem,23vw,13rem);letter-spacing:-.05em;line-height:.88;animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+.hero h2{font-size:clamp(1.4rem,4vw,2rem);margin:1.2rem 0 .6rem}
+.hero .tag{color:var(--ink);font-size:1.02rem;margin-bottom:.4rem}
+.hero .btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.arch{aspect-ratio:4/5;border-radius:999px 999px 28px 28px;animation:rise 1s .15s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+/* services */
+.grid{display:grid;gap:1.25rem;margin-top:2.5rem}
+.card{background:var(--beige);border-radius:28px;padding:.9rem .9rem 1.6rem;display:flex;flex-direction:column;gap:1rem}
+.card .ph{aspect-ratio:4/3;border-radius:20px}
+.card div.t{padding:0 .8rem;display:flex;flex-direction:column;gap:.7rem;flex:1}
+.card .btn{align-self:flex-start;margin:.4rem 0 0 .8rem}
+
+/* prices */
+.prices,.pcards{display:grid;gap:1.25rem;margin-top:2.5rem}
+.pcards{margin:1.25rem 0 2.5rem}
+.plist{background:var(--cream);border-radius:28px;padding:1.8rem 1.5rem 1rem;align-self:start}
+.plist h3{margin-bottom:.8rem}
+.plist ul{list-style:none}
+.plist li{display:flex;align-items:baseline;gap:.7rem;padding:1rem 0;border-top:1px solid var(--beige)}
+.plist li::before{content:"";order:1;flex:1;border-bottom:1.5px dotted #B9AB98;transform:translateY(-.25em)}
+.plist li span{order:0}
+.plist b,.pcard b{font:400 1.6rem/1 var(--serif);letter-spacing:-.01em;white-space:nowrap}
+.plist b{order:2}
+.pcard{background:var(--beige);border-radius:28px;padding:1.6rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.pcard h3{font-size:1.4rem;margin-bottom:.3rem}
+.pcard p{font-size:.95rem}
+
+/* benefits strip */
+section.perks-sec{padding:1rem 0 0}
+.perks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:1.2rem 1rem;background:var(--cream);border-radius:28px;padding:1.4rem 1.3rem}
+.perks li{display:flex;align-items:center;gap:.7rem;font-weight:500;line-height:1.3}
+.perks svg{flex:none;width:26px;height:26px;stroke:var(--ink);fill:none;stroke-width:1.4}
+
+/* guarantee */
+section.gsec{padding:0 0 4.5rem}
+.guarantee{background:var(--ink);color:var(--cream);border-radius:36px;padding:2.2rem 1.6rem;display:grid;gap:1.6rem;align-items:center}
+.guarantee h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:.8rem}
+.guarantee p{color:#CFC6B8;margin-bottom:1.6rem}
+.badge{width:104px;height:104px;border:1.5px solid rgba(255,253,249,.5);border-radius:50%;display:grid;place-content:center;text-align:center}
+.badge b{font:300 3rem/1 var(--serif)}
+.badge span{font-size:.75rem;letter-spacing:.12em;color:#CFC6B8}
+
+/* about */
+.about{background:var(--cream)}
+.about .wrap{display:grid;gap:2.5rem;align-items:center}
+.about .ph{aspect-ratio:1/1;border-radius:200px 200px 24px 24px}
+
+/* why */
+.why{display:grid;gap:2rem;margin-top:2.5rem}
+.why div{border-top:1.5px solid var(--ink);padding-top:1.2rem}
+.why svg{width:30px;height:30px;stroke:var(--ink);fill:none;stroke-width:1.3;margin-bottom:.9rem}
+.why h3{font-size:1.35rem;margin-bottom:.4rem}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:2.5rem}
+.gal .ph{aspect-ratio:1/1;border-radius:18px;transition:transform .5s}
+.gal .ph:nth-child(3n+1){border-radius:90px 90px 18px 18px}
+.gal .ph:hover{transform:scale(1.03)}
+
+/* cta */
+.cta{background:var(--ink);color:var(--cream);text-align:center}
+.cta h2{font-size:clamp(2.4rem,8vw,5.2rem)}
+.cta p{color:#CFC6B8;margin:0 auto 2rem}
+
+/* contact */
+.contact .wrap{display:grid;gap:2.5rem}
+dl{display:grid;gap:1.2rem}
+dt{font-weight:500}
+dd{color:var(--mute)}
+.contact .btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+
+footer{background:var(--beige);padding:3rem 0 2rem}
+footer .wrap{display:grid;gap:1.5rem}
+footer .logo{font-size:2rem}
+footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem 1.6rem}
+footer small{color:var(--mute)}
+
+@media(min-width:760px){
+ section{padding:7rem 0}
+ .menu{display:none}
+ nav{display:flex;position:static;flex-direction:row;align-items:center;gap:1.3rem;background:none;padding:0}
+ nav a{border:0;padding:0;font-size:.95rem}
+ nav a.btn{margin:0;padding:.6rem 1.3rem;min-height:42px}
+ .hero{padding-top:8rem}
+ .hero .wrap{grid-template-columns:1.25fr .75fr;align-items:end;gap:3rem}
+ .mark{margin-left:-.04em}
+ .grid{grid-template-columns:1fr 1fr}
+ .card.wide{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;gap:1rem 1.2rem}
+ .card.wide .ph{grid-row:1/3;aspect-ratio:auto;min-height:260px}
+ .card.wide .t{align-self:end}
+ .card.wide .btn{align-self:start}
+ .perks{grid-template-columns:repeat(4,1fr);padding:1.6rem 2rem;gap:1.5rem}
+ section.gsec{padding:0 0 7rem}
+ .guarantee{grid-template-columns:auto 1fr;gap:3rem;padding:3.2rem 3.5rem}
+ .badge{width:140px;height:140px}
+ .badge b{font-size:4rem}
+ .prices,.pcards{grid-template-columns:1fr 1fr}
+ .plist{padding:2.2rem 2.2rem 1.2rem}
+ .about .wrap{grid-template-columns:1fr 1fr;gap:5rem}
+ .why{grid-template-columns:repeat(4,1fr)}
+ .gal{grid-template-columns:repeat(3,1fr);gap:1.1rem}
+ .contact .wrap{grid-template-columns:1fr 1fr}
+ footer .wrap{grid-template-columns:1fr auto;align-items:end}
+ footer small{grid-column:1/-1}
+}
+@media(min-width:1000px){nav{gap:1.8rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header id="top">
+ <div class="wrap bar">
+  <a class="logo" href="#home" aria-label="LumiGlam, home">LumiGlam</a>
+  <button class="menu" aria-label="Menu" aria-expanded="false" aria-controls="nav"><i></i><i></i></button>
+  <nav id="nav" aria-label="Main">
+   <a href="#home">Home</a>
+   <a href="#services">Services</a>
+   <a href="#prices">Prices</a>
+   <a href="#about">About</a>
+   <a href="#gallery">Gallery</a>
+   <a href="#contact">Contact</a>
+   <a class="btn sm" data-timma href="#">Book now</a>
+  </nav>
+ </div>
+</header>
+
+<main id="main">
+ <section class="hero" id="home">
+  <div class="wrap">
+   <div>
+    <h1 class="mark">LumiGlam</h1>
+    <h2>Beauty Salon in Espoo</h2>
+    <p class="tag">Lashes • Nails • Pedicure • Hand &amp; Foot Care</p>
+    <p>Professional beauty treatments in a calm and elegant atmosphere.</p>
+    <div class="btns">
+     <a class="btn" data-timma href="#">Book now</a>
+     <a class="btn ghost" href="#services">Our services</a>
+    </div>
+   </div>
+   <div class="ph arch" data-label="Hero photo"><img src="images/hero.jpg" alt="LumiGlam beauty salon in Espoo" fetchpriority="high" onerror="this.remove()"></div>
+  </div>
+ </section>
+
+ <section class="perks-sec" aria-label="Benefits">
+  <div class="wrap">
+   <ul class="perks">
+    <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l11 4v8c0 7-5 11-11 14C10 26 5 22 5 15V7z"/><path d="M11 16l4 4 7-8"/></svg><span>7-Day Guarantee</span></li>
+    <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l3.2 8.8L28 15l-8.8 3.2L16 27l-3.2-8.8L4 15l8.8-3.2z"/></svg><span>Professional beauty services</span></li>
+    <li><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="6" width="24" height="22" rx="4"/><path d="M4 13h24M10 3v6M22 3v6"/></svg><span>Easy online booking</span></li>
+    <li><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M18 3L7 18h8l-2 11 12-16h-8z"/></svg><span>LED Lash Extension option</span></li>
+   </ul>
+  </div>
+ </section>
+
+ <section id="services">
+  <div class="wrap">
+   <h2>Services</h2>
+   <p>Choose a treatment and book a time that suits you.</p>
+   <div class="grid">
+    <article class="card">
+     <div class="ph" data-label="Lashes photo"><img src="images/lashes.jpg" alt="Eyelash extensions" loading="lazy" onerror="this.remove()"></div>
+     <div class="t"><h3>Eyelash Extensions</h3><p>Classic, Hybrid, Volume and Mega Volume lash extensions tailored to your style.</p></div>
+     <a class="btn sm" data-timma href="#">Book now</a>
+    </article>
+    <article class="card">
+     <div class="ph" data-label="Manicure photo"><img src="images/manicure.jpg" alt="Manicure" loading="lazy" onerror="this.remove()"></div>
+     <div class="t"><h3>Manicure</h3><p>Beautiful and clean manicures designed for an elegant everyday look.</p></div>
+     <a class="btn sm" data-timma href="#">Book now</a>
+    </article>
+    <article class="card">
+     <div class="ph" data-label="Pedicure photo"><img src="images/pedicure.jpg" alt="Pedicure" loading="lazy" onerror="this.remove()"></div>
+     <div class="t"><h3>Pedicure</h3><p>Professional pedicure treatments for healthy, beautiful and well-groomed feet.</p></div>
+     <a class="btn sm" data-timma href="#">Book now</a>
+    </article>
+    <article class="card">
+     <div class="ph" data-label="Hand &amp; foot care photo"><img src="images/hand-foot-care.jpg" alt="Hand and foot care" loading="lazy" onerror="this.remove()"></div>
+     <div class="t"><h3>Hand &amp; Foot Care</h3><p>Relaxing and nourishing treatments designed to soften and care for your hands and feet.</p></div>
+     <a class="btn sm" data-timma href="#">Book now</a>
+    </article>
+    <article class="card wide">
+     <div class="ph" data-label="LED lashes photo"><img src="images/led-lashes.jpg" alt="LED lash extensions" loading="lazy" onerror="this.remove()"></div>
+     <div class="t"><h3>LED Lash Extensions</h3><p>Modern lash extension technique using LED-curing adhesive for fast curing and a comfortable application process.</p></div>
+     <a class="btn sm" data-timma href="#">Book now</a>
+    </article>
+   </div>
+  </div>
+ </section>
+
+ <section id="prices">
+  <div class="wrap">
+   <h2>Price List</h2>
+   <p>Clear prices for every treatment. Choose your service and book your time online.</p>
+   <div class="prices">
+    <div class="plist">
+     <h3>Eyelash Extensions</h3>
+     <ul>
+      <li><span>Classic Lashes</span><b>60 €</b></li>
+      <li><span>Hybrid Lashes</span><b>70 €</b></li>
+      <li><span>Volume Lashes</span><b>80 €</b></li>
+      <li><span>Mega Volume Lashes</span><b>95 €</b></li>
+      <!-- EDIT LED PRICE HERE: replace XX with the real price -->
+      <li><span>LED Lash Extensions</span><b>XX €</b></li>
+     </ul>
+    </div>
+    <div class="plist">
+     <h3>Nails</h3>
+     <ul>
+      <li><span>Manicure</span><b>50 €</b></li>
+      <li><span>Nail Extensions</span><b>65 €</b></li>
+     </ul>
+    </div>
+   </div>
+   <!-- EDIT PRICES HERE: replace XX with the real price for Pedicure and Hand & Foot Care -->
+   <div class="pcards">
+    <div class="pcard"><div><h3>Pedicure</h3><p>Professional pedicure for well-groomed feet.</p></div><b>XX €</b></div>
+    <div class="pcard"><div><h3>Hand &amp; Foot Care</h3><p>Nourishing care for soft hands and feet.</p></div><b>XX €</b></div>
+   </div>
+   <a class="btn" data-timma href="#">Book now</a>
+  </div>
+ </section>
+
+ <section class="gsec" id="guarantee">
+  <div class="wrap">
+   <div class="guarantee">
+    <div class="badge" aria-hidden="true"><b>7</b><span>days</span></div>
+    <div>
+     <h2>7-Day Guarantee</h2>
+     <p>If you experience an issue with your treatment within 7 days, please contact us and we will review it and offer a correction when appropriate.</p>
+     <a class="btn light" href="#contact">Contact us</a>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section class="about" id="about">
+  <div class="wrap">
+   <div>
+    <h2>About LumiGlam</h2>
+    <p>At LumiGlam, we focus on beautiful results, professional service and a relaxing experience. Our goal is to make every client feel comfortable, confident and well cared for.</p>
+   </div>
+   <div class="ph" data-label="About photo"><img src="images/about.jpg" alt="Inside the LumiGlam salon" loading="lazy" onerror="this.remove()"></div>
+  </div>
+ </section>
+
+ <section>
+  <div class="wrap">
+   <h2>Why choose us</h2>
+   <div class="why">
+    <div><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l3.2 8.8L28 15l-8.8 3.2L16 27l-3.2-8.8L4 15l8.8-3.2z"/></svg><h3>Professional beauty services</h3><p>Skilled treatments done with care and precision.</p></div>
+    <div><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="11" r="5"/><path d="M6 28c1-6 5-9 10-9s9 3 10 9"/></svg><h3>Individual approach</h3><p>Every set and shape is chosen for you.</p></div>
+    <div><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3c6 7 9 11 9 16a9 9 0 01-18 0c0-5 3-9 9-16z"/></svg><h3>High-quality products</h3><p>Trusted materials that look good and last.</p></div>
+    <div><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="6" width="24" height="22" rx="4"/><path d="M4 13h24M10 3v6M22 3v6"/></svg><h3>Easy online booking</h3><p>Pick a time in a few clicks, any hour of the day.</p></div>
+   </div>
+  </div>
+ </section>
+
+ <section id="gallery" style="padding-top:0">
+  <div class="wrap">
+   <h2>Gallery</h2>
+   <div class="gal">
+    <div class="ph" data-label="Lashes"><img src="images/gallery-1.jpg" alt="Lashes" loading="lazy" onerror="this.remove()"></div>
+    <div class="ph" data-label="Manicure"><img src="images/gallery-2.jpg" alt="Manicure" loading="lazy" onerror="this.remove()"></div>
+    <div class="ph" data-label="Pedicure"><img src="images/gallery-3.jpg" alt="Pedicure" loading="lazy" onerror="this.remove()"></div>
+    <div class="ph" data-label="Nail details"><img src="images/gallery-4.jpg" alt="Nail details" loading="lazy" onerror="this.remove()"></div>
+    <div class="ph" data-label="Salon interior"><img src="images/gallery-5.jpg" alt="Salon interior" loading="lazy" onerror="this.remove()"></div>
+    <div class="ph" data-label="Beauty treatments"><img src="images/gallery-6.jpg" alt="Beauty treatments" loading="lazy" onerror="this.remove()"></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="cta">
+  <div class="wrap">
+   <h2>Ready for your next appointment?</h2>
+   <p>Lashes including LED, nails and more: choose your favourite treatment and book your appointment online in just a few clicks.</p>
+   <a class="btn light" data-timma href="#">Book with Timma</a>
+  </div>
+ </section>
+
+ <section class="contact" id="contact">
+  <div class="wrap">
+   <div>
+    <h2>Contact</h2>
+    <p>LumiGlam<br>Beauty Salon in Espoo, Finland</p>
+    <div class="btns">
+     <a class="btn" data-timma href="#">Book appointment</a>
+     <a class="btn ghost" data-insta href="#">Follow us on Instagram</a>
+    </div>
+   </div>
+   <!-- CHANGE ADDRESS, PHONE AND HOURS HERE -->
+   <dl>
+    <div><dt>Address</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=R%C3%A4lssitilankuja+4+02200+Espoo" target="_blank" rel="noopener">Rälssitilankuja 4 O 7<br>02200 Espoo</a></dd></div>
+    <div><dt>Phone</dt><dd><a href="tel:+358417262817">041 726 2817</a></dd></div>
+    <div><dt>Instagram</dt><dd><a data-insta href="#">@lumiglam__</a></dd></div>
+    <div><dt>Opening hours</dt><dd>Every day 9:00–20:00</dd></div>
+   </dl>
+  </div>
+ </section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div><a class="logo" href="#home">LumiGlam</a><p>Beauty Salon in Espoo</p></div>
+  <ul>
+   <li><a href="#services">Services</a></li>
+   <li><a href="#prices">Prices</a></li>
+   <li><a href="#about">About</a></li>
+   <li><a data-insta href="#">Instagram</a></li>
+   <li><a data-timma href="#">Book now</a></li>
+  </ul>
+  <small>© 2026 LumiGlam. All rights reserved.</small>
+ </div>
+</footer>
+
+<script>
+/* === EDIT YOUR LINKS HERE === */
+const CONFIG = {
+  timma: "https://varaa.timma.fi/lumiglam",  // Timma booking page (used by every booking button)
+  instagram: "https://www.instagram.com/lumiglam__"  // Instagram profile (used by every Instagram link)
+};
+
+document.querySelectorAll("[data-timma]").forEach(a => { a.href = CONFIG.timma; a.target = "_blank"; a.rel = "noopener"; });
+document.querySelectorAll("[data-insta]").forEach(a => { a.href = CONFIG.instagram; a.target = "_blank"; a.rel = "noopener"; });
+
+const header = document.getElementById("top");
+const onScroll = () => header.classList.toggle("stuck", scrollY > 20);
+addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+const menu = document.querySelector(".menu"), nav = document.getElementById("nav");
+const setMenu = open => { nav.classList.toggle("open", open); menu.setAttribute("aria-expanded", open); };
+menu.addEventListener("click", () => setMenu(!nav.classList.contains("open")));
+nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+</script>
+</body>
+</html>
